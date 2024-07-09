@@ -7,7 +7,7 @@ export default function HomeNewCategory() {
     <section className="container container_new_category">
       <article>
         <article className="sofa_container">
-          <p>new category is coming to our website</p>
+          <p id="new_category">new category is coming to our website</p>
           <Link to="./furniture">
             {" "}
             <span id="sofa">
@@ -18,7 +18,7 @@ export default function HomeNewCategory() {
         <article>
           <h1>Soon!</h1>
         </article>
-        <p>
+        <p id="new_category_explain">
           Stay tuned for more updates and be the first to know when our
           furniture collection goes live by subscribing to our newsletter.
         </p>
