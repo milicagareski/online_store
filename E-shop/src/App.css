@@ -9,6 +9,11 @@
   --main_transition: 0.7s linear all;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -37,6 +42,7 @@ li {
   align-items: center;
   justify-content: center;
   padding-bottom: 1rem;
+  padding-right: 0.5rem;
 }
 
 .nav-container,
@@ -314,6 +320,10 @@ li {
 
 /* HOME */
 
+.home_container {
+  padding-left: 1rem;
+}
+
 .intro_container {
   max-width: 95vw;
   display: flex;
@@ -364,7 +374,6 @@ li {
 }
 .carousel_section {
   max-width: 300px;
-  padding: 1rem;
   border: 6px solid var(--secondary_color);
   margin-bottom: 1rem;
   padding-bottom: 0;
@@ -422,12 +431,13 @@ li {
 }
 
 .home_collection_container {
-  width: 90vw;
+  /* min-width: 90vw; */
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding: 1rem 1.5rem;
 }
 
 .home_collection_container p {
@@ -458,6 +468,7 @@ li {
 
 .home_partners {
   margin-bottom: 3rem;
+  margin-top: -3rem;
 }
 
 .home_partners h1 {
@@ -486,9 +497,8 @@ li {
 }
 
 .container_new_category {
-  max-width: 90vw;
   text-align: center;
-  padding-bottom: 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 .container_new_category h1 {
   font-size: 4rem;
@@ -514,7 +524,7 @@ li {
   font-size: 1.5rem;
 }
 
-#sofa {
+.sofa {
   color: var(--secondary_color);
   font-size: 6rem;
 }
@@ -537,11 +547,57 @@ li {
   display: none;
 }
 
-.dispay_mobile {
+.display_mobile {
   display: inline;
 }
+
+.counter_container {
+  text-align: center;
+  /* min-width: 90vw; */
+  padding: 1rem;
+}
+
+.counter_container h1 {
+  font-size: 2rem;
+  color: var(--fifth_color);
+  text-transform: uppercase;
+  max-width: 600px;
+}
+
+.counter_container h2 {
+  margin-top: -1rem;
+  color: var(--secondary_color);
+  font-style: italic;
+  max-width: 550px;
+}
+
+.counter_container h3 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+#countdown {
+  font-size: 2rem;
+  width: 150px;
+  color: var(--fifth_color);
+  font-weight: bold;
+  border: 3px dotted var(--fifth_color);
+  background-color: var(--third_color);
+  padding: 0;
+  min-width: 270px;
+  margin: 0 auto;
+}
+
+.coupon_btn {
+  margin-top: 3rem;
+}
+
+.no_coupon {
+  display: none;
+}
+
 @media screen and (min-width: 500px) {
-  #_container {
+  #container {
     margin-left: 0.8rem;
   }
   #footer_navigation {
@@ -621,6 +677,16 @@ li {
   }
   .intro_container h4 {
     margin: 1rem auto;
+  }
+
+  .counter_container h3 {
+    font-size: 3rem;
+  }
+  #countdown {
+    font-size: 5rem;
+  }
+  .coupon_btn {
+    font-size: 4rem;
   }
 }
 
@@ -715,11 +781,12 @@ li {
     background: url("https://images.pexels.com/photos/3771088/pexels-photo-3771088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    position: relative;
+    /* background-position: 0 -200px; */
     min-width: 100vw;
     margin-bottom: 2rem;
     border-bottom: 1px dotted var(--secondary_color);
-    max-height: calc(100vh - 102px);
+    max-height: 100vh;
   }
   .intro_text {
     margin-bottom: 10rem;
@@ -738,10 +805,143 @@ li {
 
   .display_desktop {
     display: inline;
+    color: var(--fifth_color);
+    font-size: 2.3rem;
   }
 
-  .dispay_mobile {
+  .carousel_section {
+    min-width: 400px;
+  }
+
+  .counter_container {
+    max-height: 721px;
+    margin-top: 4rem;
+    display: flex;
+  }
+
+  .counter_container h1 {
+    /* height: 140px; */
+    margin-top: 0;
+  }
+
+  .counter_container h3 {
+    font-size: 2rem;
+  }
+
+  .coupon_btn {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+
+  .no_coupon {
     display: none;
+  }
+
+  #countdown {
+    font-size: 3rem;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .new_coupon {
+    display: inline;
+    text-transform: uppercase !important;
+    color: white !important;
+    margin-bottom: 2rem;
+  }
+
+  .display_desktop span {
+    color: white;
+  }
+
+  .display_mobile {
+    display: none;
+  }
+  .animation_container {
+    height: 138px;
+    margin-top: -2rem;
+    min-width: 100vw;
+    background-color: var(--primary_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .animation_container h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--secondary_color);
+  }
+  .dark_letters {
+    color: var(--forth_color);
+  }
+  .carousel_and_counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .partners {
+    flex-direction: column;
+  }
+  .home_collection_container {
+    width: auto;
+    margin-right: 5rem;
+  }
+
+  .partners ul:last-child {
+    margin: 1rem;
+  }
+
+  .home_container {
+    padding-left: 0;
+  }
+
+  .home_partners h1 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .home_partners {
+    padding-right: 3rem;
+  }
+
+  .carousel_container {
+    min-width: 500px;
+  }
+
+  .special_discount {
+    margin-bottom: 4.5rem;
+  }
+
+  .collection_and_partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container_new_category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .free_shiping {
+    height: 565px;
+    width: 450px;
+    margin-left: 5rem;
+  }
+
+  .free_shiping p {
+    font-size: 2.6rem;
+  }
+
+  .container_new_category #new_category,
+  .container_new_category #new_category_explain {
+    max-width: 500px;
   }
 }
 
@@ -762,10 +962,44 @@ li {
     display: flex;
     flex-direction: row;
   }
+  .animation_container h1 {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
   .intro_text {
     margin-left: 35rem;
+  }
+  .animation_container h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro_container {
+    background-position: 0 -170px;
+  }
+
+  .counter_container {
+    margin-left: 4rem;
+  }
+
+  .carousel_section {
+    min-width: 485px;
+  }
+
+  .home_collection_container {
+    margin-right: 2rem;
+  }
+
+  .collection_and_partners {
+    margin-right: 5rem;
+  }
+
+  .home_partners {
+    margin-left: 7rem;
+  }
+
+  .category_furniture {
+    margin-right: 5rem;
   }
 }
