@@ -7,9 +7,8 @@ import Products from "./pages/products/Products";
 import Contact from "./pages/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Error from "./components/error";
+import Error from "./components/error/error";
 import ShopingCard from "./pages/shoping_card/ShopingCard";
-import New_Category from "./pages/furniture/Furniture";
 import Furniture from "./pages/furniture/Furniture";
 
 function App() {
