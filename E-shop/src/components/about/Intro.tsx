@@ -1,4 +1,3 @@
-import React from "react";
 import AboutAndTeam from "./AboutAndTeam";
 export default function Intro() {
   return (
