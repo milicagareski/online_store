@@ -609,7 +609,8 @@ li {
   margin-left: 1rem;
 }
 .about_intro li p {
-  margin-top: -3rem;
+  /* margin-top: -3rem; */
+  padding-top: 5rem;
 }
 
 #meet_team {
@@ -647,7 +648,9 @@ li {
 }
 
 .member_info {
-  padding: 1rem;
+  /* padding: 1rem; */
+  margin-top: -4rem;
+  height: 750px;
 }
 
 .about_intro li article {
