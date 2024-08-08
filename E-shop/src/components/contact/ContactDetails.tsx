@@ -1,9 +1,23 @@
-import React from "react";
+interface ContactDetailsProps {
+  contactInfo: boolean;
+}
 
-export default function ContactDetails() {
+export default function ContactDetails({ contactInfo }: ContactDetailsProps) {
   return (
     <section className="container contact_details">
       <h1>contact details</h1>
+      {contactInfo && (
+        <p
+          style={{
+            textTransform: "uppercase",
+            fontSize: "1.4rem",
+            fontWeight: "bold",
+            color: "#be7a02",
+          }}
+        >
+          This are our contact details
+        </p>
+      )}
       <article className="contact_details_container">
         <article className="contact_details_article">
           <h2>Location:</h2>

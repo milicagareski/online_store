@@ -823,6 +823,10 @@ li {
 #faq span a {
   color: var(--fifth_color);
 }
+.contact_article button {
+  max-width: 300px;
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 500px) {
   #container {
@@ -857,6 +861,32 @@ li {
   }
   .about_intro li article {
     margin-right: 4rem;
+  }
+
+  .contact_form form {
+    margin-left: 0.5rem;
+    width: 450px;
+  }
+
+  .contact_article input,
+  .contact_article textarea {
+    width: 420px;
+  }
+
+  .contact_details_container {
+    width: 480px;
+    margin-left: 0.5rem;
+    max-width: 500px;
+  }
+  .contact_details_article {
+    margin: 0 auto;
+  }
+  .contact #footer_links li {
+    font-size: 6rem;
+  }
+  .faq .carousel-root {
+    max-width: 500px;
+    margin-left: 0.5rem;
   }
 }
 @media screen and (min-width: 700px) {
@@ -1051,6 +1081,65 @@ li {
   }
   .about_intro li p {
     min-width: auto;
+  }
+  .form_and_details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contact_details_container {
+    height: 427px;
+    width: 400px;
+    margin-top: 0.8rem;
+  }
+
+  .contact_form form {
+    width: 360px;
+  }
+
+  .contact_article input,
+  .contact_article textarea {
+    width: 335px;
+  }
+
+  .sm_and_faq {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* gap: 5rem; */
+  }
+
+  .sm_and_faq h1,
+  .sm_and_faq p {
+    margin-left: 2rem;
+  }
+  #faq {
+    margin-right: 5rem;
+    font-size: 2rem;
+  }
+
+  .contact #footer_links {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+
+  .faq .carousel-root {
+    max-width: 400px;
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+
+  .social_media_contact {
+    margin-right: 5rem;
+  }
+
+  .contact #footer_links {
+    height: 528px;
+    margin: auto;
+    align-content: space-around;
+    justify-content: space-around;
+    margin-top: 6rem;
   }
 }
 
@@ -1251,6 +1340,11 @@ li {
   .animation_container h1 {
     font-size: 1.3rem;
   }
+
+  .sm_and_faq,
+  .form_and_details {
+    gap: 10rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -1307,5 +1401,10 @@ li {
   .about_intro li article img {
     width: 200px;
     height: 300px;
+  }
+
+  .sm_and_faq,
+  .form_and_details {
+    gap: 15rem;
   }
 }

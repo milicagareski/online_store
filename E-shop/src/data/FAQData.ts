@@ -9,7 +9,7 @@ export const FAQquestion = [
     id: 2,
     question: "Do you offer free shipping?",
     answer:
-      "Yes, we offer free shipping on orders over [X amount]. For orders below this amount, a standard shipping fee applies. Please check our shipping policy for more details.",
+      "Yes, we offer free shipping on orders over 1000 dolars. For orders below this amount, a standard shipping fee applies. Please check our shipping policy for more details.",
   },
   {
     id: 3,
